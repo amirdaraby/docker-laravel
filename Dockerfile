@@ -1,4 +1,4 @@
-FROM docker.iranrepo.ir/php:8.0.13-fpm
+FROM docker.iranrepo.ir/php:8.1-fpm
 RUN docker-php-ext-install pdo pdo_mysql
 
 RUN mkdir /var/www/.composer \
@@ -20,4 +20,4 @@ RUN apt update
 RUN apt-get install -y default-mysql-client
 
 RUN apt-get install -y --no-install-recommends libzip-dev unzip \
-     && docker-php-ext-install zip
+     && docker-php-ext-install zip \
