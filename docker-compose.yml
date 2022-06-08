@@ -59,6 +59,13 @@ services:
                 -   php
 
 
+#    composer:
+#        container_name: composer-${PROJECT_NAME}
+#        image: dockerhub.ir/composer:latest
+#        networks:
+#            - laravel
+#        depends_on:
+#            -   php
 
 
     php:
@@ -75,7 +82,3 @@ services:
         networks:
             - laravel
 
-
-    composer:
-        container_name: composer-${PROJECT_NAME}
-        image: dockerhub.ir/composer
